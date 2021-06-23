@@ -1,0 +1,22 @@
+.graderanking {
+	scrollbar-width: thin;
+}
+
+.graderanking {
+	position: relative;
+}
+
+.graderanking table th {
+	position: sticky;
+	top: 0;
+        background: white;
+}
+
+.graderanking table div.studentname {
+	max-height: 1.5em;
+	overflow: hidden;
+}
+
+.graderanking table tr.me {
+	font-weight: bold
+}
