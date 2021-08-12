@@ -37,3 +37,4 @@ $string['alert_content'] = "This block shows a ranking of a grade category.<br>A
 $string['alert_no_categories'] = "This course has no grade categories. This block cannot work until one has been configured.";
 $string['missing_category_id'] = 'The category id `{$a}` does not exist.';
 $string['category_not_set_up'] = 'The category needs to be set up.';
+$string['privacy:metadata'] = 'The grade ranking block only displays existing grade data.';

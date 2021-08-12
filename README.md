@@ -36,3 +36,6 @@ Two grade categories were created in this sample course:
 Students can see if they are behind their colleagues in the practice of the course.
 * **Gamification points**: multiple quizzes are created with some exercises in each. Each exercise is worth an amount of points and the category is aggregated with Natural aggregation (sum of grades). Other elements, such as forum participation, can be included in the category.
 Students can check their gamification points and their colleagues'.
+
+# Privacy
+The grade ranking block only displays existing grade data.
