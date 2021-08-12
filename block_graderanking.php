@@ -142,7 +142,7 @@ class block_graderanking extends block_base {
             }
 
             # final content
-            $table = "<div class=\"graderanking\" style=\"$style\"><table class=\"generaltable table-sm\" width=\"100%\"><thead>$tablehead</thead><tbody>$tablebody</tbody></table></div>";
+            $table = "<div class=\"graderanking_container\" style=\"$style\"><table class=\"generaltable table-sm\" width=\"100%\"><thead>$tablehead</thead><tbody>$tablebody</tbody></table></div>";
             $this->content->text = $table;
         }
         return $this->content;

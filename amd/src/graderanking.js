@@ -1,5 +1,5 @@
 export const init = () => {
-        document.querySelectorAll('.graderanking').forEach(div => {
+        document.querySelectorAll('.graderanking_container').forEach(div => {
             // We find the row with the "me" class.
             const row = div.querySelector('tr.me');
             if (!row) {
