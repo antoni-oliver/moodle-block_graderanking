@@ -48,9 +48,12 @@ class block_graderanking extends block_base {
 		$this->content = new stdClass;
 
 		$users = get_enrolled_users($this->context, 'mod/assignment:submit');
+		if (!$this->config->categoryid) {
+			$this->content->text = get_string('category_not_set_up', 'block_graderanking');
+		}
 		$cat = grade_category::fetch(array('courseid' => $COURSE->id, 'id' => $this->config->categoryid));
 		if (!$cat) {
-			$this->content->text = "Cannot find category id `{$this->config->categoryid}`.";
+			$this->content->text = get_string('missing_category_id', 'block_graderanking', $this->config->categoryid);
 			return;
 		}
 		$cat_item = $cat->get_grade_item();
