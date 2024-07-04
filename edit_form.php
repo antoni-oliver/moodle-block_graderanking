@@ -17,11 +17,15 @@ class block_graderanking_edit_form extends block_edit_form {
 
 		// Category
 		$cats = grade_category::fetch_all(array('courseid' => $COURSE->id));
-		$items = array();
-		foreach ($cats as $id => $cat) {
-			$items[$id] = $cat->fullname;
+		if ($cats) {
+			$items = array();
+			foreach ($cats as $id => $cat) {
+				$items[$id] = $cat->fullname;
+			}
+			$mform->addElement('select', 'config_categoryid', get_string('category', 'block_graderanking'), $items);
+		} else {
+			$mform->addElement('static', 'description', get_string('alert', 'block_graderanking'), get_string('alert_no_categories', 'block_graderanking'));
 		}
-		$mform->addElement('select', 'config_categoryid', get_string('category', 'block_graderanking'), $items);
 		
 		// Decimal positions
 		$decimals = array(0, 1, 2, 3, 4);
