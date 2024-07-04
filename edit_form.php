@@ -24,7 +24,8 @@
 class block_graderanking_edit_form extends block_edit_form {
 	protected function specific_definition($mform) {
 		global $CFG, $COURSE;
-		
+
+		require_once($CFG->libdir . '/grade/constants.php');
 		require_once($CFG->libdir . '/grade/grade_category.php');
 
 		// Top warning

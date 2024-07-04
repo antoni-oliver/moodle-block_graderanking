@@ -29,6 +29,7 @@ class block_graderanking extends block_base {
     public function get_content() {
         global $PAGE, $CFG, $COURSE, $USER;
 
+        require_once($CFG->libdir . '/grade/constants.php');
         require_once($CFG->libdir . '/grade/grade_category.php');
         require_once($CFG->libdir . '/grade/grade_item.php');
         require_once($CFG->libdir . '/grade/grade_grade.php');
