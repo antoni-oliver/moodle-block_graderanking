@@ -21,7 +21,7 @@
  * @copyright  2021 Antoni Oliver
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_calendar_month\privacy;
+namespace block_graderanking\privacy;
 
 class provider implements
     // This plugin does not store any personal user data.
