@@ -2,25 +2,25 @@
  * File styles.css.
  * Contains styles for block block_graderanking.
  */
-.graderanking_container {
+.block_graderanking .graderanking_container {
     scrollbar-width: thin;
 }
 
-.graderanking_container {
+.block_graderanking .graderanking_container {
     position: relative;
 }
 
-.graderanking_container table th {
+.block_graderanking .graderanking_container table th {
     position: sticky;
     top: 0;
-        background: white;
+    background: white;
 }
 
-.graderanking_container table div.studentname {
+.block_graderanking .graderanking_container table div.studentname {
     max-height: 1.5em;
     overflow: hidden;
 }
 
-.graderanking_container table tr.me {
+.block_graderanking .graderanking_container table tr.me {
     font-weight: bold
 }
