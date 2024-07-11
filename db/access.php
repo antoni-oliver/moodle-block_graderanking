@@ -21,17 +21,20 @@
  * @copyright  2021 Antoni Oliver
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$capabilities = array(
-	'block/graderanking:addinstance' => array(
-		'riskbitmask' => RISK_SPAM | RISK_XSS,
 
-		'captype' => 'write',
-		'contextlevel' => CONTEXT_BLOCK,
-		'archetypes' => array(
-			'editingteacher' => CAP_ALLOW,
-			'manager' => CAP_ALLOW
-		),
+defined('MOODLE_INTERNAL') || die();
 
-		'clonepermissionsfrom' => 'moodle/site:manageblocks'
-	),
-);
+$capabilities = [
+    'block/graderanking:addinstance' => [
+        'riskbitmask' => RISK_SPAM | RISK_XSS,
+
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => [
+            'editingteacher' => CAP_ALLOW,
+            'manager' => CAP_ALLOW,
+        ],
+
+        'clonepermissionsfrom' => 'moodle/site:manageblocks',
+    ],
+];

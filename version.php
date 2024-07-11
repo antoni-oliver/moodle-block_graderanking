@@ -21,6 +21,9 @@
  * @copyright  2021 Antoni Oliver
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+defined('MOODLE_INTERNAL') || die();
+
 $plugin->component = 'block_graderanking';
 $plugin->version = 2021081218;
 $plugin->requires = 2010112400;
