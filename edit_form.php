@@ -24,6 +24,7 @@
 class block_graderanking_edit_form extends block_edit_form {
     /**
      * Define the form.
+     * @param moodleform $mform The form object.
      */
     protected function specific_definition($mform) {
         global $CFG, $COURSE;
