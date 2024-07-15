@@ -174,11 +174,11 @@ class block_graderanking extends block_base {
     public function instance_allow_multiple() {
           return true;
     }
-    
+
     /**
      * Do not allow the block to be added to the My Moodle page.
      */
-    function applicable_formats() {
-        return array('all' => true, 'my' => false, 'tag' => false);
+    public function applicable_formats() {
+        return ['all' => true, 'my' => false, 'tag' => false];
     }
 }
