@@ -90,8 +90,7 @@ class block_graderanking extends block_base {
                 foreach ($users as $userid => $user) {
                     $usergrade = $usergrades[$userid];
                     $usergrade['userid'] = $userid;
-                    $usergrade['firstname'] = $user->firstname;
-                    $usergrade['lastname'] = $user->lastname;
+                    $usergrade['fullname'] = fullname($user);
                     $usergrade['grade'] = number_format($usergrade['grade'], $this->config->decimals);
                     $usergrades[$userid] = $usergrade;
                 }
@@ -130,10 +129,9 @@ class block_graderanking extends block_base {
             foreach ($usergrades as $grade) {
                 $me = $grade['userid'] == $USER->id ? " class=\"me\"" : "";
                 $n = $grade['n'];
-                $fn = $grade['firstname'];
-                $ln = $grade['lastname'];
+                $fullname = $grade['fullname'];
                 $g = $grade['grade'];
-                $tablebody .= "<tr$me><td>$n</td><td><div class=\"studentname\">$fn $ln</div></td><td>$g</td></tr>";
+                $tablebody .= "<tr$me><td>$n</td><td><div class=\"studentname\">$fullname</div></td><td>$g</td></tr>";
             }
 
             // Header for the table.
