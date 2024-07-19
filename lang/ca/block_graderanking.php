@@ -38,3 +38,4 @@ $string['alert_no_categories'] = "Aquest curs no té cap categoria de qualificac
 $string['root_category'] = 'Categoria arrel del curs';
 $string['missing_category_id'] = 'La categoria amb id {$a} no existeix.';
 $string['category_not_set_up'] = 'S\'ha de configurar la categoria.';
+$string['privacy:metadata'] = 'El bloc classificació de qualificació només mostra dades de qualificació ja existents.';
