@@ -3,6 +3,15 @@ This simple plugin adds a block that displays a ranking of a grade category.
 
 Multiple instances of this block can be displayed in a single course.
 
+## What does this plugin offer that others do not?
+
+This plugin displays the ranking of a _grade category_. Grade categories a somewhat advanced feature that can bring extra customization, as multiple activites can be grouped into a single category.
+
+Other blocks follow a similar idea but are more restricted:
+
+* **[Activity results block](https://docs.moodle.org/Activity_results_block)**: this block is limited to activities, so there is no way to have two different activities to contribute to the same ranking.
+* **[Ranking block](https://moodle.org/plugins/block_ranking)**: this block offers many additional options, but it applies to the entire course. Making it very difficult (or impossible) to include specific activities to the ranking or to make two different rankings.
+
 ## About displaying rankings of grades...
 Although the idea is to promote the students to complete their tasks, if these are part of the final grade of the subject, the effect may be the opposite and, furthermore, a list of (part of) the grades of the subject would be made public, which may not be desirable.
 
