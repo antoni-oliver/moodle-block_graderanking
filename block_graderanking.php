@@ -55,7 +55,7 @@ class block_graderanking extends block_base {
             }
 
             // We get the enrolled users.
-            $users = get_enrolled_users($this->context, 'mod/assignment:submit');
+            $users = get_enrolled_users($this->context, 'moodle/grade:view');
 
             // We fetch the category.
             $cat = grade_category::fetch(['courseid' => $COURSE->id, 'id' => $this->config->categoryid]);
