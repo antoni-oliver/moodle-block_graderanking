@@ -49,7 +49,11 @@ class block_graderanking_edit_form extends block_edit_form {
         if ($cats) {
             $items = [];
             foreach ($cats as $id => $cat) {
-                $items[$id] = $cat->fullname;
+                if ($cat->parent == null) {
+                    $items[$id] = get_string('root_category', 'block_graderanking');
+                } else {
+                    $items[$id] = $cat->fullname;
+                }
             }
             $mform->addElement('select', 'config_categoryid', get_string('category', 'block_graderanking'), $items);
         } else {
