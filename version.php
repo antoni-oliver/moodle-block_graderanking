@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2021081218;
+$plugin->version = 2024071900;
 $plugin->requires = 2010112400;
 $plugin->supported = [400, 405];
 $plugin->component = 'block_graderanking';
