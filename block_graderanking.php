@@ -46,7 +46,7 @@ class block_graderanking extends block_base {
         if ($this->content !== null) {
             return $this->content;
         } else {
-            $this->content = new stdClass;
+            $this->content = new stdClass();
 
             // If the category has not been set up, we cannot continue.
             if (!$this->config || !$this->config->categoryid) {
