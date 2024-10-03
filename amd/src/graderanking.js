@@ -1,3 +1,11 @@
+/**
+ * File graderanking.js.
+ * Contains client javascript for block block_graderanking.
+ *
+ * @package    block_graderanking
+ * @copyright  2021 Antoni Oliver
+ * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 export const init = () => {
     document.querySelectorAll('.graderanking_container').forEach(div => {
         // We find the row with the "me" class.

@@ -1,6 +1,10 @@
 /**
  * File styles.css.
  * Contains styles for block block_graderanking.
+ *
+ * @package    block_graderanking
+ * @copyright  2021 Antoni Oliver
+ * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 .block_graderanking .graderanking_container {
     scrollbar-width: thin;
