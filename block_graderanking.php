@@ -88,11 +88,18 @@ class block_graderanking extends block_base {
             // We add user info as userid -> [firstname => firstname, lastname => lastname, grade => grade].
             if ($users) {
                 foreach ($users as $userid => $user) {
-                    $usergrade = $usergrades[$userid];
-                    $usergrade['userid'] = $userid;
-                    $usergrade['fullname'] = fullname($user);
-                    $usergrade['grade'] = number_format($usergrade['grade'], $this->config->decimals);
-                    $usergrades[$userid] = $usergrade;
+                    if (array_key_exists($userid, $usergrades)) {
+                        if ($usergrades[$userid]['grade'] === null) {
+                            // If the grade is null, we remove it from the list.
+                            unset($usergrades[$userid]);
+                        } else {
+                            $usergrade = $usergrades[$userid];
+                            $usergrade['userid'] = $userid;
+                            $usergrade['fullname'] = fullname($user);
+                            $usergrade['grade'] = number_format($usergrade['grade'], $this->config->decimals);
+                            $usergrades[$userid] = $usergrade;
+                        }
+                    }
                 }
             }
 
