@@ -96,7 +96,7 @@ class block_graderanking extends block_base {
                             $usergrade = $usergrades[$userid];
                             $usergrade['userid'] = $userid;
                             $usergrade['fullname'] = fullname($user);
-                            $usergrade['grade'] = number_format($usergrade['grade'], $this->config->decimals);
+                            $usergrade['grade_formatted'] = number_format($usergrade['grade'], $this->config->decimals);
                             $usergrades[$userid] = $usergrade;
                         }
                     }
@@ -123,11 +123,11 @@ class block_graderanking extends block_base {
             // We build the ranking positions.
             for ($i = 0, $lastgrade = null, $n = 1; $i < count($usergrades); $i++) {
                 $usergrade = $usergrades[$i];
-                if ($lastgrade !== $usergrade['grade']) {
+                if ($lastgrade !== $usergrade['grade_formatted']) {
                     $n = $i + 1;
                 }
                 $usergrade['n'] = $n;
-                $lastgrade = $usergrade['grade'];
+                $lastgrade = $usergrade['grade_formatted'];
                 $usergrades[$i] = $usergrade;
             }
 
@@ -137,7 +137,7 @@ class block_graderanking extends block_base {
                 $me = $grade['userid'] == $USER->id ? " class=\"me\"" : "";
                 $n = $grade['n'];
                 $fullname = $grade['fullname'];
-                $g = $grade['grade'];
+                $g = $grade['grade_formatted'];
                 $tablebody .= "<tr$me><td>$n</td><td><div class=\"studentname\">$fullname</div></td><td>$g</td></tr>";
             }
 
