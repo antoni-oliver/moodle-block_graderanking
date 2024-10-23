@@ -25,6 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
+    // Who can add an instance of this block?
     'block/graderanking:addinstance' => [
         'riskbitmask' => RISK_SPAM | RISK_XSS,
 
@@ -36,5 +37,17 @@ $capabilities = [
         ],
 
         'clonepermissionsfrom' => 'moodle/site:manageblocks',
+    ],
+    // Who will appear on the ranking?
+    'block/graderanking:showgrade' => [
+        'riskbitmask' => 0,
+
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => [
+            'student' => CAP_ALLOW,
+        ],
+
+        'clonepermissionsfrom' => 'moodle/grade:view',
     ],
 ];

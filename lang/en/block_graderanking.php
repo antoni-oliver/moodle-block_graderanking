@@ -25,6 +25,7 @@ $string['title'] = 'Grade ranking';
 $string['pluginname'] = 'Grade ranking';
 $string['graderanking'] = 'Grade ranking';
 $string['graderanking:addinstance'] = 'Add a new grade ranking block';
+$string['graderanking:showgrade'] = 'Appear in grade rankings';
 $string['blocktitle'] = 'Block title';
 $string['category'] = 'Grade category';
 $string['participant'] = 'Participant';

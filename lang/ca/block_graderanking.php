@@ -25,6 +25,7 @@ $string['title'] = 'Classificació de qualificació';
 $string['pluginname'] = 'Classificació de qualificació';
 $string['graderanking'] = 'Classificació de qualificació';
 $string['graderanking:addinstance'] = 'Afegeix un nou bloc de classificació de qualificació';
+$string['graderanking:showgrade'] = 'Apareix a les classificacions de qualificació';
 $string['blocktitle'] = 'Títol del bloc';
 $string['category'] = 'Categoria de qualificació';
 $string['participant'] = 'Participant';
