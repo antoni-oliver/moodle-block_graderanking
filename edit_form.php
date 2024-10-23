@@ -110,5 +110,19 @@ class block_graderanking_edit_form extends block_edit_form {
         );
         $mform->setDefault('config_tableheight', 0);
         $mform->setType('config_tableheight', PARAM_INT);
+
+        // Users to show.
+        $showusers = array_map(
+            fn($u) => fullname($u),
+            get_enrolled_users(context_course::instance($COURSE->id), 'block/graderanking:showgrade')
+        );
+        $selectshowusers = $mform->addElement(
+            'select',
+            'config_showusers',
+            get_string('showusers', 'block_graderanking'),
+            $showusers
+        );
+        $selectshowusers->setMultiple(true);
+        $mform->setDefault('config_showusers', array_keys($showusers));
     }
 }

@@ -134,11 +134,13 @@ class block_graderanking extends block_base {
             // We build the final table.
             $tablebody = "";
             foreach ($usergrades as $grade) {
-                $me = $grade['userid'] == $USER->id ? " class=\"me\"" : "";
-                $n = $grade['n'];
-                $fullname = $grade['fullname'];
-                $g = $grade['grade_formatted'];
-                $tablebody .= "<tr$me><td>$n</td><td><div class=\"studentname\">$fullname</div></td><td>$g</td></tr>";
+                if (in_array($grade['userid'], $this->config->showusers)) {
+                    $me = $grade['userid'] == $USER->id ? " class=\"me\"" : "";
+                    $n = $grade['n'];
+                    $fullname = $grade['fullname'];
+                    $g = $grade['grade_formatted'];
+                    $tablebody .= "<tr$me><td>$n</td><td><div class=\"studentname\">$fullname</div></td><td>$g</td></tr>";
+                }
             }
 
             // Header for the table.
