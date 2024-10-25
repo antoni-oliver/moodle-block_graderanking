@@ -133,7 +133,6 @@ class block_graderanking extends block_base {
 
             // We build the final table.
             $tablebody = "";
-            $this->config->showusers = null;
             foreach ($usergrades as $grade) {
                 if ($this->config->showusers == null || in_array($grade['userid'], $this->config->showusers)) {
                     $me = $grade['userid'] == $USER->id ? " class=\"me\"" : "";
